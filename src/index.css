@@ -1,3 +1,116 @@
+@import 'reset.css';
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 a {
-  transition: 1s; /* it will be prefixed */
+  color: white;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+a:hover {
+  color: rgb(255,143,108);
+}
+
+a:active, a:visited, a:focus {
+  color: white;
+}
+
+body {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.webp body {
+  background-image: url('/images/rydh_web_day_back.webp');
+}
+
+.no-webp body {
+  background-image: url('/images/rydh_web_day_back.jpg');
+}
+.container {
+  padding-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding-top: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-top: 120px;
+  }
+}
+
+.circle {
+  width: 260px;
+  height: 260px;
+  border-radius: 130px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  font-family: 'Raleway', sans-serif;
+
+  background-color: rgb(255,143,108);
+
+  color: white;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  user-select: none;
+}
+
+.circle > div {
+  display: block;
+}
+
+.buttons {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.buttons > img {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.buttons > img:hover {
+  transform: scale(1.15);
+}
+
+.spinning > div {
+  animation: spin 1.8s ease-in, spin 1.8s infinite linear;
+  animation-delay: 0s, 1.8s;
+}
+
+.credits {
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: .9em;
+  letter-spacing: .2em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
