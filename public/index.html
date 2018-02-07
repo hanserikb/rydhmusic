@@ -7,14 +7,277 @@
   <title>RYDH - Official Website</title>
   <meta name="theme-color" content="#ff8f6c" />
   <meta property="og:image" content="https://www.rydhmusic.com/images/og.jpg" />
-  <link href="https://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#ff8f6c">
-<style>a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}body,html{height:100%;width:100%}a{color:#fff;text-decoration:none;-webkit-transition:color .2s;transition:color .2s}a:hover{color:#ff8f6c}.night a:hover{color:#e94b41}a:active,a:focus,a:visited{color:#fff}body{background-size:cover;background-position:bottom}.webp body.day{background-image:url("/images/rydh_web_day_back.webp")}.no-webp body.day{background-image:url("/images/rydh_web_day_back.jpg")}.webp body.night{background-image:url("/images/rydh_web_night_back.webp")}.no-webp body.night{background-image:url("/images/rydh_web_night_back.jpg")}.container{padding-top:50px}@media screen and (min-width:600px){.container{padding-top:100px}}@media screen and (min-width:1200px){.container{padding-top:120px}}.circle{width:220px;height:220px;border-radius:130px;margin:0 auto;margin-bottom:25px;font-family:Raleway,sans-serif;color:#fff;font-size:2em;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.night .circle{background-color:#e94b41}.day .circle{background-color:#ff8f6c}.circle>div{display:block}.buttons{width:100%;margin:0 auto;text-align:center}.buttons svg{height:25px;margin:4px;cursor:pointer;-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s}.buttons>*{display:inline-block}.day .buttons svg{fill:#ff8f6c}.night .buttons svg{fill:#e94b41}.buttons svg:hover{-webkit-transform:scale(1.15);transform:scale(1.15)}.spinning>div{-webkit-animation:spin 1.8s ease-in,spin 1.8s infinite linear;animation:spin 1.8s ease-in,spin 1.8s infinite linear;-webkit-animation-delay:0s,1.8s;animation-delay:0s,1.8s}.credits{color:#fff;position:absolute;width:100%;bottom:50px;text-align:center;font-family:Raleway,sans-serif;font-size:.9em;letter-spacing:.2em}.social{margin:10px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.social>a{margin:5px;width:20px}.social svg{fill:#fff;-webkit-transition:fill .2s ease-in;transition:fill .2s ease-in}.day .social svg:hover{fill:#ff8f6c}.night .social svg:hover{fill:#e94b41}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}</style></head>
+<style>  /* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}html, body {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+a:hover {
+  color: rgb(255,143,108);
+}
+
+.night a:hover {
+  color: rgb(233,75,65);
+}
+
+a:active, a:visited, a:focus {
+  color: white;
+}
+
+body {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.webp body.day {
+  background-image: url('/images/rydh_web_day_back.webp');
+}
+
+.no-webp body.day {
+  background-image: url('/images/rydh_web_day_back.jpg');
+}
+
+
+.webp body.night {
+  background-image: url('/images/rydh_web_night_back.webp');
+}
+
+.no-webp body.night {
+  background-image: url('/images/rydh_web_night_back.jpg');
+}
+
+.container {
+  padding-top: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding-top: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-top: 120px;
+  }
+}
+
+.circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 130px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+
+  font-family: 'Raleway', sans-serif;
+
+  color: white;
+  font-size: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+
+  -webkit-user-select: none;
+
+     -moz-user-select: none;
+
+      -ms-user-select: none;
+
+          user-select: none;
+}
+
+.night .circle {
+  background-color: rgb(233,75,65);
+}
+
+.day .circle {
+  background-color: rgb(255,143,108);
+}
+
+.circle > div {
+  display: block;
+}
+
+.buttons {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.buttons svg {
+  height: 25px;
+  margin: 4px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.buttons > * {
+  display: inline-block;
+}
+
+.day .buttons svg {
+  fill: rgb(255,143,108);
+}
+
+.night .buttons svg {
+  fill: rgb(233,75,65);
+}
+.buttons svg:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.spinning > div {
+  -webkit-animation: spin 1.8s ease-in, spin 1.8s infinite linear;
+          animation: spin 1.8s ease-in, spin 1.8s infinite linear;
+  -webkit-animation-delay: 0s, 1.8s;
+          animation-delay: 0s, 1.8s;
+}
+
+.credits {
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 50px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: .9em;
+  letter-spacing: .2em;
+}
+
+.social {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.social > a {
+  margin: 5px;
+  width: 20px;
+}
+
+.social svg {
+  fill: rgb(255, 255 ,255);
+  -webkit-transition: fill .2s ease-in;
+  transition: fill .2s ease-in;
+}
+
+.day .social svg:hover {
+  fill: rgb(255,143,108);
+}
+.night .social svg:hover {
+  fill: rgb(233,75,65);
+}
+
+
+
+
+
+
+
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}</style></head>
 <body>
 <div class="container">
   <div class="circle">
@@ -33,6 +296,17 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Raleway:100' ] }
+  };
+
+ (function(d) {
+    var wf = d.createElement('script'), s = d.scripts[0];
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+    wf.async = true;
+    s.parentNode.insertBefore(wf, s);
+ })(document);</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113721204-1"></script>
 <script>
@@ -42,7 +316,219 @@
 
   gtag('config', 'UA-113721204-1');
 </script>
-<script>!function(e){function n(t){if(o[t])return o[t].exports;var i=o[t]={i:t,l:!1,exports:{}};return e[t].call(i.exports,i,i.exports,n),i.l=!0,i.exports}var o={};n.m=e,n.c=o,n.d=function(e,o,t){n.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:t})},n.n=function(e){var o=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(o,"a",o),o},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="",n(n.s=0)}([function(e,n,o){"use strict";o(1),o(2),function(){var e=(new Date).getHours();e>=18||e<=7?document.body.classList.add("night"):document.body.classList.add("day")}(),function(){function e(){s>a.length-1&&(s=0),r.setAttribute("src",a[s]),s+=1}function n(){A.classList.add("spinning")}function o(){A.classList.remove("spinning")}var t=document.querySelector(".play"),i=document.querySelector(".pause"),A=document.querySelector(".circle"),a=["/audio/webloop4_tape.m4a","/audio/webloop1.m4a","/audio/webloop2.m4a"],s=0,r=document.createElement("audio");r.loop="true",e(),t.addEventListener("click",function(){n(),r.play()}),i.addEventListener("click",function(){o(),e(),r.pause()})}()},function(e,n){},function(e,n,o){"use strict";var t="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};/*! modernizr 3.5.0 (Custom Build) | MIT *
+<script>/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(1);
+__webpack_require__(2);
+
+(function () {
+  var today = new Date().getHours();
+  if (today >= 18 || today <= 7) {
+    document.body.classList.add('night');
+  } else {
+    document.body.classList.add('day');
+  }
+})();
+
+(function () {
+  var play = document.querySelector('.play');
+  var pause = document.querySelector('.pause');
+  var circle = document.querySelector('.circle');
+  var sounds = ['/audio/webloop4_tape.m4a', '/audio/webloop1.m4a', '/audio/webloop2.m4a'];
+  var nowPlayingIndex = 0;
+  var myAudio = document.createElement('audio');
+  myAudio.loop = 'true';
+
+  changeSound();
+
+  play.addEventListener('click', function () {
+    startSpinning();
+    myAudio.play();
+  });
+
+  pause.addEventListener('click', function () {
+    stopSpinning();
+    changeSound();
+    myAudio.pause();
+  });
+
+  function changeSound() {
+    if (nowPlayingIndex > sounds.length - 1) {
+      nowPlayingIndex = 0;
+    }
+    myAudio.setAttribute('src', sounds[nowPlayingIndex]);
+    nowPlayingIndex = nowPlayingIndex + 1;
+  }
+  function startSpinning() {
+    circle.classList.add('spinning');
+  }
+  function stopSpinning() {
+    circle.classList.remove('spinning');
+  }
+})();
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*! modernizr 3.5.0 (Custom Build) | MIT *
 * https://modernizr.com/download/?-webp-setclasses !*/
-!function(e,n,o){function i(e,n){return(void 0===e?"undefined":t(e))===n}function A(e){var n=f.className,o=l._config.classPrefix||"";if(d&&(n=n.baseVal),l._config.enableJSClass){var t=new RegExp("(^|\\s)"+o+"no-js(\\s|$)");n=n.replace(t,"$1"+o+"js$2")}l._config.enableClasses&&(n+=" "+o+e.join(" "+o),d?f.className.baseVal=n:f.className=n)}function a(e,n){if("object"==(void 0===e?"undefined":t(e)))for(var o in e)c(e,o)&&a(o,e[o]);else{e=e.toLowerCase();var i=e.split("."),s=l[i[0]];if(2==i.length&&(s=s[i[1]]),void 0!==s)return l;n="function"==typeof n?n():n,1==i.length?l[i[0]]=n:(!l[i[0]]||l[i[0]]instanceof Boolean||(l[i[0]]=new Boolean(l[i[0]])),l[i[0]][i[1]]=n),A([(n&&0!=n?"":"no-")+i.join("-")]),l._trigger(e,n)}return l}var s=[],r=[],u={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var o=this;setTimeout(function(){n(o[e])},0)},addTest:function(e,n,o){r.push({name:e,fn:n,options:o})},addAsyncTest:function(e){r.push({name:null,fn:e})}},l=function(){};l.prototype=u,l=new l;var c,f=n.documentElement,d="svg"===f.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;c=i(e,"undefined")||i(e.call,"undefined")?function(e,n){return n in e&&i(e.constructor.prototype[n],"undefined")}:function(n,o){return e.call(n,o)}}(),u._l={},u.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),l.hasOwnProperty(e)&&setTimeout(function(){l._trigger(e,l[e])},0)},u._trigger=function(e,n){if(this._l[e]){var o=this._l[e];setTimeout(function(){var e;for(e=0;e<o.length;e++)(0,o[e])(n)},0),delete this._l[e]}},l._q.push(function(){u.addTest=a}),l.addAsyncTest(function(){function e(e,n,o){function t(n){var t=!(!n||"load"!==n.type)&&1==i.width;a(e,"webp"===e&&t?new Boolean(t):t),o&&o(n)}var i=new Image;i.onerror=t,i.onload=t,i.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],o=n.shift();e(o.name,o.uri,function(o){if(o&&"load"===o.type)for(var t=0;t<n.length;t++)e(n[t].name,n[t].uri)})}),function(){var e,n,o,t,A,a,u;for(var c in r)if(r.hasOwnProperty(c)){if(e=[],n=r[c],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(o=0;o<n.options.aliases.length;o++)e.push(n.options.aliases[o].toLowerCase());for(t=i(n.fn,"function")?n.fn():n.fn,A=0;A<e.length;A++)a=e[A],u=a.split("."),1===u.length?l[u[0]]=t:(!l[u[0]]||l[u[0]]instanceof Boolean||(l[u[0]]=new Boolean(l[u[0]])),l[u[0]][u[1]]=t),s.push((t?"":"no-")+u.join("-"))}}(),A(s),delete u.addTest,delete u.addAsyncTest;for(var p=0;p<l._q.length;p++)l._q[p]();e.Modernizr=l}(window,document)}]);</script></body>
+!function (e, n, A) {
+  function o(e, n) {
+    return (typeof e === "undefined" ? "undefined" : _typeof(e)) === n;
+  }function t() {
+    var e, n, A, t, a, i, l;for (var f in r) {
+      if (r.hasOwnProperty(f)) {
+        if (e = [], n = r[f], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length)) for (A = 0; A < n.options.aliases.length; A++) {
+          e.push(n.options.aliases[A].toLowerCase());
+        }for (t = o(n.fn, "function") ? n.fn() : n.fn, a = 0; a < e.length; a++) {
+          i = e[a], l = i.split("."), 1 === l.length ? Modernizr[l[0]] = t : (!Modernizr[l[0]] || Modernizr[l[0]] instanceof Boolean || (Modernizr[l[0]] = new Boolean(Modernizr[l[0]])), Modernizr[l[0]][l[1]] = t), s.push((t ? "" : "no-") + l.join("-"));
+        }
+      }
+    }
+  }function a(e) {
+    var n = u.className,
+        A = Modernizr._config.classPrefix || "";if (c && (n = n.baseVal), Modernizr._config.enableJSClass) {
+      var o = new RegExp("(^|\\s)" + A + "no-js(\\s|$)");n = n.replace(o, "$1" + A + "js$2");
+    }Modernizr._config.enableClasses && (n += " " + A + e.join(" " + A), c ? u.className.baseVal = n : u.className = n);
+  }function i(e, n) {
+    if ("object" == (typeof e === "undefined" ? "undefined" : _typeof(e))) for (var A in e) {
+      f(e, A) && i(A, e[A]);
+    } else {
+      e = e.toLowerCase();var o = e.split("."),
+          t = Modernizr[o[0]];if (2 == o.length && (t = t[o[1]]), "undefined" != typeof t) return Modernizr;n = "function" == typeof n ? n() : n, 1 == o.length ? Modernizr[o[0]] = n : (!Modernizr[o[0]] || Modernizr[o[0]] instanceof Boolean || (Modernizr[o[0]] = new Boolean(Modernizr[o[0]])), Modernizr[o[0]][o[1]] = n), a([(n && 0 != n ? "" : "no-") + o.join("-")]), Modernizr._trigger(e, n);
+    }return Modernizr;
+  }var s = [],
+      r = [],
+      l = { _version: "3.5.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function on(e, n) {
+      var A = this;setTimeout(function () {
+        n(A[e]);
+      }, 0);
+    }, addTest: function addTest(e, n, A) {
+      r.push({ name: e, fn: n, options: A });
+    }, addAsyncTest: function addAsyncTest(e) {
+      r.push({ name: null, fn: e });
+    } },
+      Modernizr = function Modernizr() {};Modernizr.prototype = l, Modernizr = new Modernizr();var f,
+      u = n.documentElement,
+      c = "svg" === u.nodeName.toLowerCase();!function () {
+    var e = {}.hasOwnProperty;f = o(e, "undefined") || o(e.call, "undefined") ? function (e, n) {
+      return n in e && o(e.constructor.prototype[n], "undefined");
+    } : function (n, A) {
+      return e.call(n, A);
+    };
+  }(), l._l = {}, l.on = function (e, n) {
+    this._l[e] || (this._l[e] = []), this._l[e].push(n), Modernizr.hasOwnProperty(e) && setTimeout(function () {
+      Modernizr._trigger(e, Modernizr[e]);
+    }, 0);
+  }, l._trigger = function (e, n) {
+    if (this._l[e]) {
+      var A = this._l[e];setTimeout(function () {
+        var e, o;for (e = 0; e < A.length; e++) {
+          (o = A[e])(n);
+        }
+      }, 0), delete this._l[e];
+    }
+  }, Modernizr._q.push(function () {
+    l.addTest = i;
+  }), Modernizr.addAsyncTest(function () {
+    function e(e, n, A) {
+      function o(n) {
+        var o = n && "load" === n.type ? 1 == t.width : !1,
+            a = "webp" === e;i(e, a && o ? new Boolean(o) : o), A && A(n);
+      }var t = new Image();t.onerror = o, t.onload = o, t.src = n;
+    }var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }],
+        A = n.shift();e(A.name, A.uri, function (A) {
+      if (A && "load" === A.type) for (var o = 0; o < n.length; o++) {
+        e(n[o].name, n[o].uri);
+      }
+    });
+  }), t(), a(s), delete l.addTest, delete l.addAsyncTest;for (var p = 0; p < Modernizr._q.length; p++) {
+    Modernizr._q[p]();
+  }e.Modernizr = Modernizr;
+}(window, document);
+
+/***/ })
+/******/ ]);</script></body>
 </html>
