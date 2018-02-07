@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 
 
 module.exports = {
@@ -19,8 +20,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'mySite',
-      templates: 'assets/index.html'
+      template: 'assets/index.html',
     }),
+    new HtmlWebpackInlineSVGPlugin(),
     new ScriptExtHtmlWebpackPlugin({
       inline: ['bundle.js']
     }),
