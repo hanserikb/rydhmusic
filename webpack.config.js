@@ -10,7 +10,15 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: ''
+  },
+  devServer: {
+    contentBase: 'dist',
+    publicPath: 'dist',
+    port: 9000,
+    watchContentBase: true,
+    hot: false
   },
   module: {
     rules: [
@@ -20,7 +28,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'mySite',
-      template: 'assets/index.html',
+      template: 'src/index.html',
     }),
     new HtmlWebpackInlineSVGPlugin(),
     new ScriptExtHtmlWebpackPlugin({
