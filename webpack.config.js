@@ -10,19 +10,25 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'public'),
     publicPath: ''
   },
   devServer: {
-    contentBase: 'dist',
-    publicPath: 'dist',
+    contentBase: 'public',
+    publicPath: 'public',
     port: 9000,
-    watchContentBase: true,
-    hot: false
   },
   module: {
     rules: [
-      { test: /\.css$/, loader: ExtractTextWebpackPlugin.extract('css-loader!postcss-loader')}
+      { test: /\.css$/, loader: ExtractTextWebpackPlugin.extract('css-loader!postcss-loader')},
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: 'env'
+        }
+      }
     ]
   },
   plugins: [
