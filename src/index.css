@@ -1,0 +1,3 @@
+a {
+  transition: 1s; /* it will be prefixed */
+}

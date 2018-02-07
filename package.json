@@ -1,0 +1,23 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "''",
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-loader": "^2.1.0",
+    "script-ext-html-webpack-plugin": "^1.8.8",
+    "style-ext-html-webpack-plugin": "^3.4.7",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
