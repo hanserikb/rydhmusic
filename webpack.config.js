@@ -35,6 +35,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'mySite',
       template: 'src/index.html',
+      svgoConfig: {
+        cleanupAttrs: false
+      }
     }),
     new HtmlWebpackInlineSVGPlugin(),
     new ScriptExtHtmlWebpackPlugin({

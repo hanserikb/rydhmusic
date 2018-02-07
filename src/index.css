@@ -16,6 +16,10 @@ a:hover {
   color: rgb(255,143,108);
 }
 
+.night a:hover {
+  color: rgb(233,75,65);
+}
+
 a:active, a:visited, a:focus {
   color: white;
 }
@@ -25,13 +29,23 @@ body {
   background-position: bottom center;
 }
 
-.webp body {
+.webp body.day {
   background-image: url('/images/rydh_web_day_back.webp');
 }
 
-.no-webp body {
+.no-webp body.day {
   background-image: url('/images/rydh_web_day_back.jpg');
 }
+
+
+.webp body.night {
+  background-image: url('/images/rydh_web_night_back.webp');
+}
+
+.no-webp body.night {
+  background-image: url('/images/rydh_web_night_back.jpg');
+}
+
 .container {
   padding-top: 50px;
 }
@@ -48,15 +62,13 @@ body {
 }
 
 .circle {
-  width: 260px;
-  height: 260px;
+  width: 220px;
+  height: 220px;
   border-radius: 130px;
   margin: 0 auto;
   margin-bottom: 25px;
 
   font-family: 'Raleway', sans-serif;
-
-  background-color: rgb(255,143,108);
 
   color: white;
   font-size: 2em;
@@ -65,6 +77,14 @@ body {
   justify-content: center;
 
   user-select: none;
+}
+
+.night .circle {
+  background-color: rgb(233,75,65);
+}
+
+.day .circle {
+  background-color: rgb(255,143,108);
 }
 
 .circle > div {
@@ -77,15 +97,25 @@ body {
   text-align: center;
 }
 
-.buttons > img {
-  width: 35px;
-  height: 35px;
-  margin: 5px;
+.buttons svg {
+  height: 25px;
+  margin: 4px;
   cursor: pointer;
   transition: transform .3s;
 }
 
-.buttons > img:hover {
+.buttons > * {
+  display: inline-block;
+}
+
+.day .buttons svg {
+  fill: rgb(255,143,108);
+}
+
+.night .buttons svg {
+  fill: rgb(233,75,65);
+}
+.buttons svg:hover {
   transform: scale(1.15);
 }
 
@@ -104,6 +134,36 @@ body {
   font-size: .9em;
   letter-spacing: .2em;
 }
+
+.social {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.social > a {
+  margin: 5px;
+  width: 20px;
+}
+
+.social svg {
+  fill: rgb(255, 255 ,255);
+  transition: fill .2s ease-in;
+}
+
+.day .social svg:hover {
+  fill: rgb(255,143,108);
+}
+.night .social svg:hover {
+  fill: rgb(233,75,65);
+}
+
+
+
+
+
+
+
 
 @keyframes spin {
   0% {

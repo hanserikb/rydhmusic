@@ -2,7 +2,14 @@ require('./index.css');
 require('./modernizr.js');
 
 
-
+(() => {
+  var today = new Date().getHours();
+  if (today >= 18 || today <= 7) {
+    document.body.classList.add('night');
+  } else {
+    document.body.classList.add('day');
+  }
+})();
 
 (() => {
   const play = document.querySelector('.play');
