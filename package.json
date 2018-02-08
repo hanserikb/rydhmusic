@@ -21,7 +21,8 @@
   "devDependencies": {},
   "scripts": {
     "dev:server": "webpack-dev-server",
-    "prod:server": "webpack-dev-server -p"
+    "prod:server": "webpack-dev-server -p",
+    "deploy:prod": "webpack -p && dploy"
   },
   "author": "",
   "license": "ISC"
