@@ -1,55 +1,45 @@
 require('./index.css');
 require('./modernizr.js');
 
+// Set day/night body class depending on time
+var today = new Date().getHours();
+document.body.classList.add((today >= 18 || today <= 7) ? 'night' : 'day');
 
-(() => {
-  var today = new Date().getHours();
-  if (today >= 18 || today <= 7) {
-    document.body.classList.add('night');
-  } else {
-    document.body.classList.add('day');
+// Audio controller
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
+const circle = document.querySelector('.circle');
+const sounds = [
+  '/audio/webloop1.m4a',
+  '/audio/webloop5.m4a',
+  '/audio/webloop6.m4a',
+  '/audio/webloop7.m4a',
+];
+let nowPlayingIndex = 0;
+const myAudio = document.createElement('audio');
+myAudio.loop = 'true';
+
+changeAudio();
+
+play.addEventListener('click', () => {
+  startSpinning();
+  myAudio.play();
+});
+
+pause.addEventListener('click', () => {
+  stopSpinning();
+  changeAudio();
+  myAudio.pause();
+});
+
+// Cycle the audio list and attach next to the player
+function changeAudio() {
+  if (nowPlayingIndex > sounds.length-1) {
+    nowPlayingIndex = 0;
   }
-})();
+  myAudio.setAttribute('src', sounds[nowPlayingIndex]);
+  nowPlayingIndex++;
+}
 
-(() => {
-  const play = document.querySelector('.play');
-  const pause = document.querySelector('.pause');
-  const circle = document.querySelector('.circle');
-  const sounds = [
-    '/audio/webloop1.m4a',
-    '/audio/webloop5.m4a',
-    '/audio/webloop6.m4a',
-    '/audio/webloop7.m4a',
-  ];
-  let nowPlayingIndex = 0;
-  var myAudio = document.createElement('audio');
-  myAudio.loop = 'true';
-
-  changeSound();
-
-  play.addEventListener('click', () => {
-    startSpinning();
-    myAudio.play();
-  });
-
-  pause.addEventListener('click', () => {
-    stopSpinning();
-    changeSound();
-    myAudio.pause();
-  });
-
-  function changeSound() {
-    if (nowPlayingIndex > sounds.length-1) {
-      nowPlayingIndex = 0;
-    }
-    myAudio.setAttribute('src', sounds[nowPlayingIndex]);
-    nowPlayingIndex = nowPlayingIndex + 1;
-  }
-  function startSpinning() {
-    circle.classList.add('spinning');
-  }
-  function stopSpinning() {
-    circle.classList.remove('spinning');
-  }
-
-})();
+function startSpinning() { circle.classList.add('spinning'); }
+function stopSpinning() { circle.classList.remove('spinning'); }
