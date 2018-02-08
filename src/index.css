@@ -1,12 +1,11 @@
 @import 'reset.css';
 
-
 html, body {
   height: 100%;
   width: 100%;
 }
 
-a {
+a, a:active, a:visited, a:focus {
   color: white;
   text-decoration: none;
   transition: color .2s;
@@ -18,10 +17,6 @@ a:hover {
 
 .night a:hover {
   color: rgb(233,75,65);
-}
-
-a:active, a:visited, a:focus {
-  color: white;
 }
 
 body {
@@ -36,7 +31,6 @@ body {
 .no-webp body.day {
   background-image: url('/images/rydh_web_day_back.jpg');
 }
-
 
 .webp body.night {
   background-image: url('/images/rydh_web_night_back.webp');
@@ -115,6 +109,7 @@ body {
 .night .buttons svg {
   fill: rgb(233,75,65);
 }
+
 .buttons svg:hover {
   transform: scale(1.15);
 }
@@ -157,13 +152,6 @@ body {
 .night .social svg:hover {
   fill: rgb(233,75,65);
 }
-
-
-
-
-
-
-
 
 @keyframes spin {
   0% {
