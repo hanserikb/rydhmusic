@@ -16,9 +16,10 @@ require('./modernizr.js');
   const pause = document.querySelector('.pause');
   const circle = document.querySelector('.circle');
   const sounds = [
-    '/audio/webloop4_tape.m4a',
     '/audio/webloop1.m4a',
-    '/audio/webloop2.m4a',
+    '/audio/webloop5.m4a',
+    '/audio/webloop6.m4a',
+    '/audio/webloop7.m4a',
   ];
   let nowPlayingIndex = 0;
   var myAudio = document.createElement('audio');
