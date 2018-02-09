@@ -11,9 +11,9 @@ const pause = document.querySelector('.pause');
 const circle = document.querySelector('.circle');
 const sounds = [
   '/audio/webloop4_tape.m4a',
-  '/audio/webloop5.m4a',
-  '/audio/webloop6.m4a',
-  '/audio/webloop7.m4a',
+  '/audio/webloop2.m4a',
+  '/audio/webloop3.m4a',
+  '/audio/webloop4.m4a',
 ];
 let nowPlayingIndex = 0;
 const myAudio = document.createElement('audio');
