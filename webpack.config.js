@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 
 module.exports = {
@@ -11,11 +11,9 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
-    publicPath: ''
   },
   devServer: {
     contentBase: 'public',
-    publicPath: 'public',
     port: 9000,
   },
   module: {
@@ -28,6 +26,14 @@ module.exports = {
         options: {
           presets: 'env'
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader?interpolate'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   },
@@ -35,13 +41,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'mySite',
       template: 'src/index.html',
+      alwaysWriteToDisk: true,
       svgoConfig: {
         cleanupAttrs: false
       }
     }),
-    new HtmlWebpackInlineSVGPlugin(),
     new ScriptExtHtmlWebpackPlugin({
       inline: ['bundle.js']
+    }),
+    new HtmlWebpackHarddiskPlugin({
+      outputPath: path.resolve(__dirname, 'public')
     }),
     new ExtractTextWebpackPlugin('styles.css'),
     new StyleExtHtmlWebpackPlugin({ // Remove in dev
