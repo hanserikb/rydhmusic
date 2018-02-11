@@ -8,18 +8,20 @@ document.body.classList.add((today >= 18 || today <= 7) ? 'night' : 'day');
 // Audio controller
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
 const circle = document.querySelector('.circle');
 const sounds = [
   '/audio/webloop4_tape.m4a',
-  '/audio/webloop2.m4a',
-  '/audio/webloop3.m4a',
-  '/audio/webloop4.m4a',
+  '/audio/webloop-2.mp3',
+  '/audio/webloop-3.mp3',
+  '/audio/webloop-4.mp3',
 ];
 let nowPlayingIndex = 0;
 const myAudio = document.createElement('audio');
 myAudio.loop = 'true';
 
-changeAudio();
+setNext ();
 
 play.addEventListener('click', () => {
   startSpinning();
@@ -28,17 +30,38 @@ play.addEventListener('click', () => {
 
 pause.addEventListener('click', () => {
   stopSpinning();
-  changeAudio();
+  setNext()
   myAudio.pause();
 });
 
-// Cycle the audio list and attach next to the player
-function changeAudio() {
+next.addEventListener('click', () => {
+  setNext();
+  myAudio.play();
+});
+
+prev.addEventListener('click', () => {
+  setPrevious();
+  myAudio.play();
+});
+
+function setNext() {
   if (nowPlayingIndex > sounds.length-1) {
     nowPlayingIndex = 0;
   }
-  myAudio.setAttribute('src', sounds[nowPlayingIndex]);
+  changeAudio(sounds[nowPlayingIndex]);
   nowPlayingIndex++;
+}
+
+function setPrevious() {
+  if (nowPlayingIndex > 0) {
+    nowPlayingIndex--
+  }
+  changeAudio(sounds[nowPlayingIndex]);
+}
+
+// Cycle the audio list and attach next to the player
+function changeAudio(track) {
+  myAudio.setAttribute('src', track);
 }
 
 function startSpinning() { circle.classList.add('spinning'); }

@@ -4,6 +4,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 module.exports = {
@@ -56,5 +57,21 @@ module.exports = {
     new StyleExtHtmlWebpackPlugin({ // Remove in dev
       minify: false
     }),
+    new BrowserSyncPlugin(
+      {
+        // browse to http://localhost:3000/ during development
+        host: 'localhost',
+        port: 3000,
+        // proxy the Webpack Dev Server endpoint
+        // (which should be serving on http://localhost:3100/)
+        // through BrowserSync
+        proxy: 'http://localhost:9000/'
+      },
+      // plugin options
+      {
+        // prevent BrowserSync from reloading the page
+        // and let Webpack Dev Server take care of this
+        reload: false
+      })
   ]
 };
