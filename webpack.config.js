@@ -15,7 +15,9 @@ module.exports = {
   },
   devServer: {
     contentBase: 'public',
+    host: 'localhost',
     port: 9000,
+    overlay: true
   },
   module: {
     rules: [
