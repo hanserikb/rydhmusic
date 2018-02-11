@@ -45,6 +45,7 @@ module.exports = {
       title: 'mySite',
       template: 'src/index.html',
       alwaysWriteToDisk: true,
+      minify: process.NODE_ENV === 'production' ? true : false,
       svgoConfig: {
         cleanupAttrs: false
       }
