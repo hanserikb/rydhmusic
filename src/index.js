@@ -20,25 +20,33 @@ myAudio.loop = 'true';
 setNext ();
 
 play.addEventListener('click', () => {
-  startSpinning();
-  myAudio.play();
+  playAudio();
 });
 
 pause.addEventListener('click', () => {
-  stopSpinning();
   setNext()
-  myAudio.pause();
+  pauseAudio();
 });
 
 next.addEventListener('click', () => {
   setNext();
-  myAudio.play();
+  playAudio();
 });
 
 prev.addEventListener('click', () => {
   setPrevious();
-  myAudio.play();
+  playAudio();
 });
+
+function playAudio() {
+  startSpinning();
+  myAudio.play();
+}
+
+function pauseAudio() {
+  stopSpinning();
+  myAudio.pause();
+}
 
 function setNext() {
   if (nowPlayingIndex > sounds.length-1) {
