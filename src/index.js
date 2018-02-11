@@ -1,10 +1,6 @@
 require('./index.css');
 require('./modernizr.js');
 
-// Set day/night body class depending on time
-var today = new Date().getHours();
-document.body.classList.add((today >= 18 || today <= 7) ? 'night' : 'day');
-
 // Audio controller
 const play = document.querySelector('.play');
 const pause = document.querySelector('.pause');

@@ -15,29 +15,17 @@ a:hover {
   color: rgb(255,143,108);
 }
 
-.night a:hover {
-  color: rgb(233,75,65);
-}
-
 body {
   background-size: cover;
   background-position: bottom center;
 }
 
-.webp body.day {
+.webp body {
   background-image: url('/images/rydh_web_day_back.webp');
 }
 
-.no-webp body.day {
+.no-webp body {
   background-image: url('/images/rydh_web_day_back.jpg');
-}
-
-.webp body.night {
-  background-image: url('/images/rydh_web_night_back.webp');
-}
-
-.no-webp body.night {
-  background-image: url('/images/rydh_web_night_back.jpg');
 }
 
 .container {
@@ -73,11 +61,7 @@ body {
   user-select: none;
 }
 
-.night .circle {
-  background-color: rgb(233,75,65);
-}
-
-.day .circle {
+.circle {
   background-color: rgb(255,143,108);
 }
 
@@ -105,12 +89,8 @@ body {
   display: inline-block;
 }
 
-.day .buttons svg {
+.buttons svg {
   fill: rgb(255,143,108);
-}
-
-.night .buttons svg {
-  fill: rgb(233,75,65);
 }
 
 .buttons svg:hover {
@@ -149,11 +129,8 @@ body {
   transition: fill .2s ease-in;
 }
 
-.day .social svg:hover {
+.social svg:hover {
   fill: rgb(255,143,108);
-}
-.night .social svg:hover {
-  fill: rgb(233,75,65);
 }
 
 @keyframes spin {
