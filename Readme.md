@@ -10,4 +10,5 @@ The goal was to create a very simple landing page with a low loading time, skipp
 * ScriptExtHtmlWebpackPlugin - Converts script tags to inline scripts;
 * StyleExtHtmlWebpackPlugin - Converts stylesheet link tags to inline styles.
 * ExtractTextWebpackPlugin - Used to convert the CSS code to raw text instead of JS code
-* HtmlWebpackInlineSVGPlugin - Transforms svg-images referenced in img-tags to inline SVG code.
+* html-loader - Parse the index.html file
+* svg-inline-loader - Parse the .svg references found in the index.html and replace them with inline SVG code
