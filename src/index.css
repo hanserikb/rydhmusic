@@ -17,7 +17,8 @@ a:hover {
 
 body {
   background-size: cover;
-  background-position: bottom center;
+  background-position: center bottom;
+  background-attachment: fixed;
 }
 
 .webp body {
@@ -115,9 +116,9 @@ body {
 
 .credits {
   color: white;
-  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 30px;
   width: 100%;
-  bottom: 15px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
   font-size: .8em;
