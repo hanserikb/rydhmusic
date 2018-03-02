@@ -114,6 +114,13 @@ body {
   }
 }
 
+@media screen and (max-height: 667px) {
+  .youtube iframe {
+    width: 280px;
+    height: 157px;
+  }
+}
+
 .credits {
   color: white;
   padding-top: 20px;
