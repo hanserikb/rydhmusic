@@ -102,6 +102,17 @@ body {
   animation-delay: 0s, 1.8s;
 }
 
+.youtube {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  .youtube iframe {
+    width: 100%;
+  }
+}
+
 .credits {
   color: white;
   position: absolute;
