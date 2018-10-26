@@ -5,6 +5,17 @@ html, body {
   width: 100%;
 }
 
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}
+
 a, a:active, a:visited, a:focus {
   color: white;
   text-decoration: none;
@@ -76,6 +87,7 @@ body {
   text-align: center;
 }
 
+
 .buttons svg {
   cursor: pointer;
   transition: transform .3s;
@@ -103,19 +115,19 @@ body {
   animation-delay: 0s, 1.8s;
 }
 
-.youtube {
+.promomedia {
   text-align: center;
   margin-top: 20px;
 }
 
 @media screen and (max-width: 560px) {
-  .youtube iframe {
+  .promomedia iframe {
     width: 100%;
   }
 }
 
 @media screen and (max-height: 667px) {
-  .youtube iframe {
+  .promomedia iframe {
     width: 280px;
     height: 157px;
   }

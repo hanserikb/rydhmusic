@@ -41,11 +41,15 @@ prev.addEventListener('click', () => {
 
 function playAudio() {
   startSpinning();
+  play.setAttribute('aria-pressed', 'true');
+  pause.setAttribute('aria-pressed', 'false');
   myAudio.play();
 }
 
 function pauseAudio() {
   stopSpinning();
+  play.setAttribute('aria-pressed', 'false');
+  pause.setAttribute('aria-pressed', 'true');
   myAudio.pause();
 }
 

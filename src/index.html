@@ -16,26 +16,27 @@
 </head>
 <body>
 <div class="container">
+  <h1 style="display:none">Rydh Music</h1>
   <div class="circle">
     <div class="">coming soon</div>
   </div>
   <div class="buttons">
-    <div class="prev">${require('../public/images/skip_left_day.svg')}</div>
-    <div class="pause">${require('../public/images/pause.svg')}</div>
-    <div class="play">${require('../public/images/play.svg')}</div>
-    <div class="next">${require('../public/images/skip_right_day.svg')}</div>
+    <button title="Play previous clip" class="prev">${require('../public/images/skip_left_day.svg')}</button>
+    <button title="Pause music" aria-pressed="true" class="pause">${require('../public/images/pause.svg')}</button>
+    <button title="Play music" aria-pressed="false" class="play">${require('../public/images/play.svg')}</button>
+    <button title="Play next clip" class="next">${require('../public/images/skip_right_day.svg')}</button>
   </div>
-  <div class="youtube">
-    <iframe width="373" height="210" src="https://www.youtube.com/embed/rDKdxuF8IKc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <div class="promomedia">
+    <iframe src="https://open.spotify.com/embed/artist/35GsO1a5Yv8RXJPAA7fBeg" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
   </div>
   <div class="credits">
     <div class="social">
-      <a target="_blank" href="https://open.spotify.com/artist/35GsO1a5Yv8RXJPAA7fBeg?si=b1b_-lBgSvqcZrl1qjkIhA">${require('../public/images/spotify.svg')}</a>
-      <a target="_blank" href="http://www.facebook.com/rydhmusic">${require('../public/images/facebook.svg')}</a>
-      <a target="_blank" href="http://www.instagram.com/rydhmusic">${require('../public/images/instagram.svg')}</a>
-      <a target="_blank" href="http://www.soundcloud.com/rydhmusic">${require('../public/images/soundcloud.svg')}</a>
+      <a target="_blank" title="Listen on spotify" href="https://open.spotify.com/artist/35GsO1a5Yv8RXJPAA7fBeg?si=b1b_-lBgSvqcZrl1qjkIhA">${require('../public/images/spotify.svg')}</a>
+      <a target="_blank" title="Visit Facebook profile" href="http://www.facebook.com/rydhmusic">${require('../public/images/facebook.svg')}</a>
+      <a target="_blank" title="Instagram account" href="http://www.instagram.com/rydhmusic">${require('../public/images/instagram.svg')}</a>
+      <a target="_blank" title="Listen on soundcloud" href="http://www.soundcloud.com/rydhmusic">${require('../public/images/soundcloud.svg')}</a>
     </div>
-    <a href="mailto:info@rydhmusic.com" title="Get in touch">info@rydhmusic.com</a>
+    <a href="mailto:info@rydhmusic.com" title="Get in touch, send a mail">info@rydhmusic.com</a>
   </div>
 </div>
 <script type="text/javascript">
